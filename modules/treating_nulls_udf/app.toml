@@ -1,0 +1,17 @@
+snowsql_config_path = "~/.snowsql/config"
+snowsql_connection_name = "dev"
+
+[default]
+input_parameters = "(value string, isNumeric int)"
+return_type = "string"
+file = "app.zip"
+name = "treating_nulls"
+handler = "app.treating_nulls"
+execute_as_caller = true
+
+[dev]
+database = "HOL_DB"
+schema = "ANALYTICS"
+warehouse = "HOL_WH"
+role = "ACCOUNTADMIN"
+overwrite = true

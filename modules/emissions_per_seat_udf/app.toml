@@ -1,0 +1,17 @@
+snowsql_config_path = "~/.snowsql/config"
+snowsql_connection_name = "dev"
+
+[default]
+input_parameters = "(avg_co2_emissions float, avg_total_seats float)"
+return_type = "float"
+file = "app.zip"
+name = "emissions_per_seat"
+handler = "app.emissions_per_seat"
+execute_as_caller = true
+
+[dev]
+database = "HOL_DB"
+schema = "ANALYTICS"
+warehouse = "HOL_WH"
+role = "ACCOUNTADMIN"
+overwrite = true

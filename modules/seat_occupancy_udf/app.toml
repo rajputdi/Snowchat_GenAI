@@ -1,0 +1,17 @@
+snowsql_config_path = "~/.snowsql/config"
+snowsql_connection_name = "dev"
+
+[default]
+input_parameters = "(total_seats int, occupied_seats int)"
+return_type = "float"
+file = "app.zip"
+name = "seat_occupancy"
+handler = "app.seat_occupancy"
+execute_as_caller = true
+
+[dev]
+database = "HOL_DB"
+schema = "ANALYTICS"
+warehouse = "HOL_WH"
+role = "ACCOUNTADMIN"
+overwrite = true
